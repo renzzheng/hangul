@@ -513,16 +513,12 @@ function triggerSearch() {
 
     let u = rangeNode.data.charCodeAt(selStartOffset);
 
-    let isChineseCharacter = !isNaN(u) && (
-        u === 0x25CB ||
-        (0x3400 <= u && u <= 0x9FFF) ||
-        (0xF900 <= u && u <= 0xFAFF) ||
-        (0xFF21 <= u && u <= 0xFF3A) ||
-        (0xFF41 <= u && u <= 0xFF5A) ||
-        (0xD800 <= u && u <= 0xDFFF)
+    // Hangul syllables: 가 (U+AC00) to 힣 (U+D7A3)
+    let isKoreanCharacter = !isNaN(u) && (
+        (0xAC00 <= u && u <= 0xD7A3)
     );
 
-    if (!isChineseCharacter) {
+    if (!isKoreanCharacter) {
         clearHighlight();
         hidePopup();
         return 3;
