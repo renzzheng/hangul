@@ -1,41 +1,21 @@
 # 한국 Hangul
 
-[![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/kkmlkkjojmombglmlpbpapmhcaljjkde)](https://chrome.google.com/webstore/detail/zhongwen-chinese-english/kkmlkkjojmombglmlpbpapmhcaljjkde)
-[![Chrome Users](https://img.shields.io/chrome-web-store/users/kkmlkkjojmombglmlpbpapmhcaljjkde?label=chrome%20users)](https://chrome.google.com/webstore/detail/zhongwen-chinese-english/kkmlkkjojmombglmlpbpapmhcaljjkde)
-[![Mozilla Add-on Version](https://img.shields.io/amo/v/zhongwen)](https://addons.mozilla.org/en-US/firefox/addon/zhongwen/)
-[![Firefox Users](https://img.shields.io/amo/users/zhongwen?label=firefox%20users)](https://addons.mozilla.org/en-US/firefox/addon/zhongwen/)
-
 ## A Korean Pop-Up Dictionary and Learning Tool
 
-This browser extension allows you to translate Chinese characters and words
-by simply hovering over them with the mouse.  
-It also contains useful features for learners of the Chinese language.
+This browser extension allows you to translate Korean words by simply hovering over them with the mouse.  
+It also contains useful features for learners of the Korean language.
 
 [![Chrome](https://developer.chrome.com/static/docs/webstore/branding/image/UV4C4ybeBTsZt43U4xis.png)](https://chrome.google.com/extensions/detail/kkmlkkjojmombglmlpbpapmhcaljjkde)
-[![Firefox](https://blog.mozilla.org/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/en-US/firefox/addon/zhongwen)
 
 
 ## Highlights
-- Supports both traditional and simplified characters.
-- Includes a recent version of the widely used 
-  [CEDICT](https://cc-cedict.org/wiki) Chinese English dictionary.
-- Displays Hanyu Pinyin along both the simplified and traditional characters,
-  however only showing either simplified or traditional characters
-  can be configured as an option.
-- As a learning aid it uses different colors for displaying the Pinyin
-  syllables, depending on the tone of the Chinese character.
+- Hover over any Korean text to instantly see the English translation.
+- Displays romanization (Revised Romanization of Korean) alongside the Korean word.
 - Can be turned on and off with a single mouse-click.
-- Highlights the characters whose translation is displayed in the pop-up
-  window.
-- Also supports keyboard navigation for translating the next character, the
-  next word, or the previous character.
-- Allows you to add words to a built-in word list. Words from this list can be
-  exported to a text file for further processing, such as importing the words
-  into [Anki](https://apps.ankiweb.net).
-- Includes links to grammar and usage notes on the 
-  [Chinese Grammar Wiki](https://resources.allsetlearning.com/chinese/grammar).
-- Supports exporting words to the [Skritter](https://skritter.com) vocabulary 
-  queue.
+- Highlights the word whose translation is displayed in the pop-up window.
+- Supports keyboard navigation for moving between words and characters.
+- Allows you to add words to a built-in word list, exportable for use in
+  [Anki](https://apps.ankiweb.net).
 
 
 ## Installation
@@ -47,29 +27,19 @@ https://chrome.google.com/extensions/detail/kkmlkkjojmombglmlpbpapmhcaljjkde
 Simply click on the "Add to Chrome" button to start the installation.
 
 
-### Firefox
-The Zhongwen Firefox extension is available via the Firefox Add-Ons site:  
-https://addons.mozilla.org/en-US/firefox/addon/zhongwen
-
-Simply click on the "Add to Firefox" button to start the installation.
-
-
 ## How Does It Work?
-Once Zhongwen is installed on your computer you'll see a little icon showing
-the Zhongwen logo near the upper right-hand corner of your browser. By
+Once Hangul is installed on your computer you'll see a little icon showing
+the Hangul logo near the upper right-hand corner of your browser. By
 clicking on this icon you can turn the extension on and off. Click on it and
 wait until you see the word "On" displayed in red and white on top of the icon.
 This tells you that the dictionary is active. If you want to turn it off again,
 just click on the icon again and the red "On" label disappears. So with a
 single mouse-click you can activate or deactivate the dictionary.
 
-Once Zhongwen has been turned on, showing the red "On" label on the icon, you
-can go to a web page in Chinese and point your mouse at some Chinese characters.
+Once Hangul has been turned on, showing the red "On" label on the icon, you
+can go to a web page in Korean and point your mouse at some Korean words.
 A pop-up window opens up automatically showing you the translation of the word
 you were pointing at.
-
-Zhongwen can translate both simplified characters as well as traditional
-characters.
 
 
 ## What Dictionary Does It Use?
@@ -89,12 +59,6 @@ By default, the pop-up window shows the following pieces of information:
 - The English translation. Sometimes, Zhongwen finds more than one matching 
   entry in its dictionary. In this case it shows you all of the matching 
   entries.
-
-
-## Zhuyin
-If you want to see Zhuyin, a.k.a. 
-[Bopomofo](https://en.wikipedia.org/wiki/Bopomofo), you can enable it via the 
-[options page](#more-options).
 
 
 ## Chinese Grammar Wiki
