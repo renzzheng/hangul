@@ -1,4 +1,4 @@
-# 한국어 Hangug-eo
+# 한국 Hangul
 
 [![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/kkmlkkjojmombglmlpbpapmhcaljjkde)](https://chrome.google.com/webstore/detail/zhongwen-chinese-english/kkmlkkjojmombglmlpbpapmhcaljjkde)
 [![Chrome Users](https://img.shields.io/chrome-web-store/users/kkmlkkjojmombglmlpbpapmhcaljjkde?label=chrome%20users)](https://chrome.google.com/webstore/detail/zhongwen-chinese-english/kkmlkkjojmombglmlpbpapmhcaljjkde)
@@ -70,6 +70,13 @@ you were pointing at.
 
 Zhongwen can translate both simplified characters as well as traditional
 characters.
+
+
+## What Dictionary Does It Use?
+This extension uses data from the 한국어기초사전 (Korean Learner's Dictionary),
+provided by the National Institute of Korean Language (국립국어원).
+
+https://krdict.korean.go.kr
 
 
 ## What Information Does It Show?
@@ -148,13 +155,6 @@ components of the entry are nicely put in different columns and rows. From there
 also import them into Anki. (See the Anki manual for further details.)
 
 
-## Skritter Support
-If you're studying Chinese characters using Skritter you can easily add Chinese words
-to your vocabulary queue: just hit <kbd>S</kbd> on the keyboard. This opens up a new tab that
-takes you to the Skritter web site. If you're not logged into Skritter you'll see the
-login page. After you're logged in, the word is automatically added to your study queue.
-
-
 ## Context Menu Items
 When Zhongwen is enabled, you can right-click on a page to open the browser's
 context menu. There will be a menu item for Zhongwen which you can use to access
@@ -212,4 +212,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 ---
 
-*Copyright (C) 2025 Christian Schiller*
+*This extension is a fork of [Zhongwen](https://github.com/cschiller/zhongwen) by Christian Schiller.*  
+*Original copyright © 2025 Christian Schiller. Licensed under GPL-2.0.*  
+*Korean dictionary data © 국립국어원 (National Institute of Korean Language) — https://krdict.korean.go.kr*
