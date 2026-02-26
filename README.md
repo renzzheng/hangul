@@ -2,8 +2,7 @@
 
 ## A Korean Pop-Up Dictionary and Learning Tool
 
-This browser extension allows you to translate Korean words by simply hovering over them with the mouse.  
-It also contains useful features for learners of the Korean language.
+This browser extension allows you to translate Korean words by simply hovering over them with the mouse. It also contains useful features for learners of the Korean language.
 
 [![Chrome](https://developer.chrome.com/static/docs/webstore/branding/image/UV4C4ybeBTsZt43U4xis.png)](https://chrome.google.com/extensions/detail/kkmlkkjojmombglmlpbpapmhcaljjkde)
 
@@ -68,17 +67,6 @@ you're just looking at, it will show you the following text at the bottom
 of the pop-up window: 'Press "g" for grammar and usage notes.' If you then
 press <kbd>G</kbd> on your keyboard, a new tab will open in your browser and it 
 will take you directly to the corresponding page in the Chinese Grammar Wiki.
-
-
-## Why Is Pinyin Shown in Different Colors?
-If you're learning Chinese, Zhongwen helps you remember the tone of each
-character by displaying it in a different color. By default it uses the 
-following color scheme for showing Pinyin syllables:
-
-- First tone syllables are shown in red.
-- Second tone syllables are shown in orange.
-- Third tone syllables are shown in green.
-- Forth tone syllables are shown in blue.
 
 
 ## Keyboard Navigation

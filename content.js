@@ -48,6 +48,9 @@
 
 'use strict';
 
+console.log("Hangul content script loaded");
+
+
 let config;
 
 let savedTarget;
@@ -581,7 +584,24 @@ function processSearchResult(result) {
         highlightMatch(doc, rangeNode, selStartOffset, highlightLength, selEndList);
     }
 
-    showPopup(makeHtml(result, config.tonecolors !== 'no'), savedTarget, popX, popY, false);
+    // pop up the definition
+    const raw = result.data[0][0];
+    console.log("RAW DATA:", raw);
+    console.log("CHARCODE 0-20:", [...raw.substring(0,20)].map(c => c.charCodeAt(0)));
+    const match = raw.match(/^(\S+)\s+\[([^\]]+)\]\s+\/(.+)/);
+    console.log("MATCH RESULT:", match);
+    let html;
+    if (match) {
+        const word = match[1];
+        const roman = match[2];
+        const meaning = match[3].replace(/\/+$/, '').replace(/\//g, ' ◆ ');
+        html = `<b style="font-size:18px">${word}</b> <span style="color:#888">[${roman}]</span><br>${meaning}`;
+    } else {
+        let word = result.data[0][1];
+        let meaning = result.data[0][0].split('/')[1];
+        html = `<b style="font-size:18px">${word}</b><br>${meaning}`;
+    }
+    showPopup(html, savedTarget, popX, popY, false);
 }
 
 // modifies selEndList as a side-effect
@@ -883,11 +903,14 @@ function makeHtml(result, showToneColors) {
     if (result === null) return '';
 
     for (let i = 0; i < result.data.length; ++i) {
-        entry = result.data[i][0].match(/^([^\s]+?)\s+([^\s]+?)\s+\[(.*?)\]?\s*\/(.+)\//);
+        entry = result.data[i][0].match(/^(\S+)\s+\S+\s+\[([^\]]+)\]\s+\/(.+)\//);
+        console.log("RAW:", result.data[i][0]);
+        console.log("MATCH:", entry);
         if (!entry) continue;
 
-        // Hanzi
+        console.log("entry match:", entry);
 
+        // Hanzi
         if (config.simpTrad === 'auto') {
 
             let word = result.data[i][1];
@@ -904,35 +927,26 @@ function makeHtml(result, showToneColors) {
             if (config.fontSize === 'small') {
                 hanziClass += '-small';
             }
-            html += '<span class="' + hanziClass + '">' + entry[2] + '</span>&nbsp;';
-            if (entry[1] !== entry[2]) {
+            html += '<span class="' + hanziClass + '">' + entry[1] + '</span>&nbsp;';
+            if (false) {
                 html += '<span class="' + hanziClass + '">' + entry[1] + '</span>&nbsp;';
             }
 
         }
 
-        // Pinyin
-
+        // Romanization
         let pinyinClass = 'w-pinyin';
         if (config.fontSize === 'small') {
             pinyinClass += '-small';
         }
-        let p = pinyinAndZhuyin(entry[3], showToneColors, pinyinClass);
-        html += p[0];
-
-        // Zhuyin
-
-        if (config.zhuyin === 'yes') {
-            html += '<br>' + p[2];
-        }
+        html += '&nbsp;<span class="' + pinyinClass + '">[' + entry[2] + ']</span>';
 
         // Definition
-
         let defClass = 'w-def';
         if (config.fontSize === 'small') {
             defClass += '-small';
         }
-        let translation = entry[4].replace(/\//g, ' ◆ ');
+        let translation = entry[3].replace(/\//g, ' ◆ ');
         html += '<br><span class="' + defClass + '">' + translation + '</span><br>';
 
         let addFinalBr = false;
@@ -953,7 +967,7 @@ function makeHtml(result, showToneColors) {
             html += '<br>';
         }
 
-        texts[i] = [entry[2], entry[1], p[1], translation, entry[3]];
+        texts[i] = [entry[1], entry[1], entry[2], translation, entry[2]];
     }
     if (result.more) {
         html += '&hellip;<br/>';
@@ -1134,3 +1148,16 @@ chrome.runtime.onMessage.addListener(
         }
     }
 );
+
+// Force-enable extension for now
+enableTab();
+config = {
+    css: "yellow",
+    tonecolors: "no",
+    fontSize: "small",
+    zhuyin: "no",
+    grammar: "no",
+    vocab: "no",
+    simpTrad: "classic",
+    toneColorScheme: "standard"
+};

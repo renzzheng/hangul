@@ -1,55 +1,35 @@
 {
   "manifest_version": 3,
-  "name": "Hangul: Korean-English Dictionary",
-  "short_name": "Hangul",
-  "version": "5.16.0",
-  "author": "Ren Zheng",
-  "homepage_url": "https://github.com/renzzheng/hangul",
-  "description": "Great tool for learning Korean. Includes links to Korean Grammar Wiki.",
-  "icons": {
-    "16": "images/hangul.png",
-    "48": "images/hangul.png",
-    "128": "images/hangul.png"
-  },
-  "browser_action": {
-    "default_icon": "images/hangul.png",
+  "name": "Hangul Test",
+  "version": "1.0",
+  "description": "Test extension",
+  "action": {
+    "default_icon": {
+      "16": "images/hangul.png",
+      "48": "images/hangul.png",
+      "128": "images/hangul.png"
+    },
     "default_title": "Hangul Korean Popup Dictionary"
   },
   "background": {
-    "page": "background.html"
+    "service_worker": "background.js"
   },
   "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "js/jquery-3.3.1.min.js",
-        "js/zhuyin.js",
-        "content.js"
-      ],
-      "css": [
-        "css/content.css"
-      ],
-      "all_frames": true
-    }
-  ],
-  "options_ui": {
-    "page": "options.html",
-    "open_in_tab": true
-  },
-  "permissions": [
-    "contextMenus",
-    "tabs"
-  ],
-  "commands": {
-    "_execute_browser_action": {
-      "description": "Enable/Disable Hangul"
-    }
-  },
+  {
+    "matches": ["<all_urls>"],
+    "js": [
+      "js/jquery-3.3.1.min.js",
+      "js/zhuyin.js",
+      "content.js"
+    ],
+    "css": ["css/content.css"],
+    "all_frames": true
+  }
+],
   "web_accessible_resources": [
-    "css/*",
-    "js/*",
-    "images/*"
+    {
+      "resources": ["css/*", "js/*", "images/*"],
+      "matches": ["<all_urls>"]
+    }
   ]
 }

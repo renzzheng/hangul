@@ -25,7 +25,7 @@
   z-index: 999999999;
   border: 1px solid #d0d0d0 !important;
   padding: 4px;
-  background: #e6f4ff;
+  background: #f8f7f3;
   top: 5px;
   left: 5px;
   min-width: 100px;
@@ -36,6 +36,7 @@
 #zhongwen-window .w-hanzi {
   font-size: 32px;
   margin-right: 0.7em;
+  color: #074192 !important; /* cobalt blue */
 }
 
 #zhongwen-window .w-pinyin {
@@ -81,7 +82,7 @@
 #zhongwen-window.background-yellow,
 #zhongwen-window.background-yellow * {
   color: #000000;
-  background: #ffffbf;
+  background: #f8f7f3;
 }
 
 #zhongwen-window.background-yellow .w-hanzi,

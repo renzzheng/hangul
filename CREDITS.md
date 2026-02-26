@@ -4,11 +4,8 @@ The Zhongwen Chrome extension was written by Christian Schiller with
 contributions from the following people:
 
 * Todd Rudick (http://rikaixul.mozdev.org/)
-
 * Jonathan Zarate (http://www.polarcloud.com/)
-
 * Erek Speed (http://code.google.com/p/rikaikun/)
-
 * Lenoard Lausen (https://github.com/leezu)
 
 Furthermore, Zhongwen would not be possible without the work of all the editors
