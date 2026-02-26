@@ -1,5 +1,7 @@
 # 한국 Hangul
-
+<div align="center">
+  <img width="439" height="110" alt="image" src="https://github.com/user-attachments/assets/ae3f7f09-d671-4198-9f39-c7233959aa02" />
+</div>
 ## A Korean Pop-Up Dictionary and Learning Tool
 
 This browser extension allows you to translate Korean words by simply hovering over them with the mouse. It also contains useful features for learners of the Korean language.
