@@ -1,10 +1,7 @@
 # 한국 Hangul
 
 ## A Korean Pop-Up Dictionary and Learning Tool
-
-This browser extension allows you to translate Korean words by simply hovering over them with the mouse. It also contains useful features for learners of the Korean language.
-
-[![Chrome](https://developer.chrome.com/static/docs/webstore/branding/image/UV4C4ybeBTsZt43U4xis.png)](https://chrome.google.com/extensions/detail/kkmlkkjojmombglmlpbpapmhcaljjkde)
+This browser extension allows you to translate Korean words and phrases by simply hovering over them with the mouse. It also contains useful features for learners of the Korean language.
 
 
 ## Highlights
@@ -20,10 +17,9 @@ This browser extension allows you to translate Korean words by simply hovering o
 ## Installation
 
 ### Chrome
-The Zhongwen Chrome extension is available via the Chrome Web Store:  
-https://chrome.google.com/extensions/detail/kkmlkkjojmombglmlpbpapmhcaljjkde
-
-Simply click on the "Add to Chrome" button to start the installation.
+Load the extension manually via
+chrome://extensions → Enable Developer Mode → Load Unpacked.
+*(Chrome Web Store listing coming soon.)*
 
 
 ## How Does It Work?
@@ -41,6 +37,14 @@ A pop-up window opens up automatically showing you the translation of the word
 you were pointing at.
 
 
+## What Information Does It Show?
+By default, the pop-up window shows the following pieces of information:
+
+- The Korean word you're pointing at with your mouse.
+- The romanization of the word (Revised Romanization of Korean).
+- The English translation. Sometimes, Hangul finds more than one matching entry in its dictionary. In this case it shows you all of the matching entries.
+
+
 ## What Dictionary Does It Use?
 This extension uses data from the 한국어기초사전 (Korean Learner's Dictionary),
 provided by the National Institute of Korean Language (국립국어원).
@@ -48,31 +52,10 @@ provided by the National Institute of Korean Language (국립국어원).
 https://krdict.korean.go.kr
 
 
-## What Information Does It Show?
-By default, the pop-up window shows the following pieces of information:
-
-- The Chinese characters forming the word you're pointing at with your mouse. If
-  the simplified and the traditional forms differ, then both forms are shown.
-- The corresponding Pinyin. The individual Pinyin syllables are shown in 
-  different colors (see below).
-- The English translation. Sometimes, Zhongwen finds more than one matching 
-  entry in its dictionary. In this case it shows you all of the matching 
-  entries.
-
-
-## Chinese Grammar Wiki
-Zhongwen also allows you to learn more about Chinese grammar and usage. If
-Zhongwen knows that there's an entry at the Chinese Grammar Wiki for the entry
-you're just looking at, it will show you the following text at the bottom
-of the pop-up window: 'Press "g" for grammar and usage notes.' If you then
-press <kbd>G</kbd> on your keyboard, a new tab will open in your browser and it 
-will take you directly to the corresponding page in the Chinese Grammar Wiki.
-
-
 ## Keyboard Navigation
-Some users don't use Zhongwen to look up individual words, they want to read
+Some users don't use Hangul to look up individual words, they want to read
 an entire paragraph or article. In this case, rather than having to trace all
-the words with the mouse, you can use Zhongwen's built-in keyboard navigation
+the words with the mouse, you can use Hangul's built-in keyboard navigation
 support: You can move from character to character or from word to word by
 pressing keys on your keyboard:
 
@@ -88,63 +71,27 @@ pressing keys on your keyboard:
 
 
 ## Built-in Word List
-So now that you can look up all those words when reading Chinese web sites, wouldn't
-it be nice to add the new words you want to remember to some list that you can use for
-studying? Zhongwen let's you do that, too! It has a built- in word list feature. You just
-need to press <kbd>R</kbd> (short for "remember") on your keyboard and the entries you're looking
-at in the currently opened pop-up window will be added to the built-in word list. How
-do you get to see this list? It's easy, you need to use press the <kbd>Alt</kbd> and the <kbd>W</kbd> key
-on your keyboard (<kbd>Alt</kbd> + <kbd>W</kbd>). The word list will then open in a new tab.
+Hangul has a built-in word list feature. You just need to press <kbd>R</kbd>
+(short for "remember") on your keyboard and the entry in the currently opened
+pop-up window will be added to the built-in word list. To view the list, press
+<kbd>Alt</kbd> + <kbd>W</kbd> and it will open in a new tab.
 
 
 ## Can I export the dictionary entries into a spreadsheet or import them into Anki?
-Yes, if you want to copy the current dictionary entry, including the Chinese characters,
-Pinyin, and the English translation, to the clipboard, just hit <kbd>C</kbd> on the keyboard to
-copy to the clipboard. (Note: This is different from using <kbd>Ctrl</kbd> + <kbd>C</kbd> on a PC or
-<kbd>⌘ Command</kbd> + <kbd>C</kbd> on a Mac, which only copies the Chinese characters without the translation.)
-When you paste the clipboard into Excel or an OpenOffice spreadsheet, the individual
-components of the entry are nicely put in different columns and rows. From there you can
-also import them into Anki. (See the Anki manual for further details.)
+Yes, if you want to copy the current dictionary entry, including the Korean word,
+romanization, and the English translation, to the clipboard, just hit <kbd>C</kbd>
+on the keyboard to copy to the clipboard. When you paste the clipboard into Excel
+or an OpenOffice spreadsheet, the individual components of the entry are nicely
+put in different columns and rows. From there you can also import them into Anki.
+(See the Anki manual for further details.)
 
 
 ## Context Menu Items
-When Zhongwen is enabled, you can right-click on a page to open the browser's
-context menu. There will be a menu item for Zhongwen which you can use to access
+When Hangul is enabled, you can right-click on a page to open the browser's
+context menu. There will be a menu item for Hangul which you can use to access
 a new tab showing a helpful summary of all the keyboard shortcuts. Another
 menu item can be used for opening the word list as an alternative to the
 <kbd>Alt</kbd> + <kbd>W</kbd> keyboard shortcut.
-
-
-## What Built-In Dictionary Does It Use?
-Zhongwen comes with a recent release of the CC-CEDICT dictionary. This dictionary is
-constantly updated, and each Zhongwen release will include an updated version of the
-dictionary.
-
-
-## Support for Online Dictionaries
-Sometimes, in addition to looking at the translation in the pop-up window, you might
-want to look up a word in one of the freely available online dictionaries. Zhongwen
-lets you quickly do that by some simple keyboard shortcuts.
-
-* <kbd>Alt</kbd> + <kbd>1</kbd> looks up the selected word using [LINE Dict](https://dict.naver.com/linedict/zhendict).
-* <kbd>Alt</kbd> + <kbd>2</kbd> lets you look up the pronunciation on [Forvo](https://forvo.com).
-* <kbd>Alt</kbd> + <kbd>3</kbd> takes you to [Dict.cn](https://dict.cn).
-* <kbd>Alt</kbd> + <kbd>4</kbd> uses [iCIBA](https://www.iciba.com).
-* <kbd>Alt</kbd> + <kbd>5</kbd> looks up the word in the [MDBG dictionary](https://mdbg.net).
-* <kbd>Alt</kbd> + <kbd>6</kbd> takes you to [Reverso](https://reverso.net).
-* <kbd>Alt</kbd> + <kbd>7</kbd> takes you to [MoeDict](https://moedict.tw).
-* <kbd>T</kbd> is for looking up example sentences at [Tatoeba](https://tatoeba.org).
-
-Your browser will open a new tab and the word that was shown in the pop-up window
-will be looked up in the corresponding online dictionary listed above.
-
-
-## More Options
-Zhongwen also has an options page which allows you to configure certain aspects
-of its behavior. In order to get there just right-click on the Zhongwen logo
-in the upper right-hand corner of the browser and choose "Options". A new tab
-will open showing you all the available options with a brief explanation of
-each one.
 
 
 ## Legal
